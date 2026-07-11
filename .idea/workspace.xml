@@ -4,7 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="" />
+    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="feat: added reach check">
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/Vigilante.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/Vigilante.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -36,67 +41,67 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.2469956754564622E-30" />
-      <entry key="MS500" value="1.4104890859843037E-6" />
-      <entry key="S2" value="0.06841741881412439" />
-      <entry key="S5" value="0.6611407949541924" />
-      <entry key="S10" value="1.4976826696010928" />
-      <entry key="S30" value="3.2423476446578112" />
-      <entry key="S60" value="4.654670760402288" />
-      <entry key="M2" value="5.950191901342567" />
-      <entry key="M5" value="7.7365786667896925" />
-      <entry key="M10" value="10.36461885792721" />
-      <entry key="M15" value="12.309530609249927" />
-      <entry key="M30" value="16.902319867442408" />
-      <entry key="H1" value="34.06089538289489" />
-      <entry key="H2" value="80.5215200471888" />
-      <entry key="H4" value="143.1930284390339" />
-      <entry key="D1" value="244.8826025883387" />
-      <entry key="W1" value="269.61269437172933" />
+      <entry key="MS100" value="1.125417000883839" />
+      <entry key="MS500" value="2.0320819198914863" />
+      <entry key="S2" value="2.683843966292069" />
+      <entry key="S5" value="2.865964685865099" />
+      <entry key="S10" value="2.9316456081570936" />
+      <entry key="S30" value="2.9788582999924937" />
+      <entry key="S60" value="3.1483486399192655" />
+      <entry key="M2" value="4.508777995331274" />
+      <entry key="M5" value="9.239603019375485" />
+      <entry key="M10" value="14.29624760402855" />
+      <entry key="M15" value="17.49559491998489" />
+      <entry key="M30" value="23.707559529062163" />
+      <entry key="H1" value="41.21499682014331" />
+      <entry key="H2" value="87.43121943677949" />
+      <entry key="H4" value="150.51670489261667" />
+      <entry key="D1" value="254.12878287530225" />
+      <entry key="W1" value="279.4942778836613" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0000271253259634" />
-      <entry key="MS500" value="1.1220885661202784" />
-      <entry key="S2" value="1.5911106012945218" />
-      <entry key="S5" value="1.8103422398671074" />
-      <entry key="S10" value="1.9018382725263048" />
-      <entry key="S30" value="2.1448382630720317" />
-      <entry key="S60" value="2.577761536318743" />
-      <entry key="M2" value="3.0820895552687095" />
-      <entry key="M5" value="3.6770642766119783" />
-      <entry key="M10" value="4.244962691581479" />
-      <entry key="M15" value="4.644575990360744" />
-      <entry key="M30" value="6.324070040365355" />
-      <entry key="H1" value="14.060660104062611" />
-      <entry key="H2" value="30.88261190026058" />
-      <entry key="H4" value="50.059638431531624" />
-      <entry key="D1" value="77.60312632798835" />
-      <entry key="W1" value="83.89628611184258" />
+      <entry key="MS100" value="0.0" />
+      <entry key="MS500" value="1.136035486797913E-225" />
+      <entry key="S2" value="8.97514677582831E-57" />
+      <entry key="S5" value="5.731880939349692E-23" />
+      <entry key="S10" value="1.0701430145019042E-11" />
+      <entry key="S30" value="3.81490705446543E-4" />
+      <entry key="S60" value="0.03437854130700592" />
+      <entry key="M2" value="0.35593246876219037" />
+      <entry key="M5" value="1.5506370725640526" />
+      <entry key="M10" value="2.7566291752759673" />
+      <entry key="M15" value="3.482964542354076" />
+      <entry key="M30" value="5.476437824865852" />
+      <entry key="H1" value="13.084479618475816" />
+      <entry key="H2" value="29.791295978787808" />
+      <entry key="H4" value="49.16719073902174" />
+      <entry key="D1" value="77.37081388725198" />
+      <entry key="W1" value="83.86036119188817" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.011597840589973497" />
-      <entry key="MS500" value="0.42150939282996114" />
-      <entry key="S2" value="1.1842536245212927" />
-      <entry key="S5" value="2.1704780969550717" />
-      <entry key="S10" value="3.203418709362586" />
-      <entry key="S30" value="5.29104013080463" />
-      <entry key="S60" value="7.168020593607808" />
-      <entry key="M2" value="8.991500351989165" />
-      <entry key="M5" value="11.393033127692489" />
-      <entry key="M10" value="14.596741680923186" />
-      <entry key="M15" value="16.944314000727825" />
-      <entry key="M30" value="23.21927785292191" />
-      <entry key="H1" value="48.11271318934377" />
-      <entry key="H2" value="111.39361027281102" />
-      <entry key="H4" value="193.2438191081833" />
-      <entry key="D1" value="322.4833787354315" />
-      <entry key="W1" value="353.5086158911355" />
+      <entry key="MS100" value="0.1461962357337387" />
+      <entry key="MS500" value="1.174187138614939" />
+      <entry key="S2" value="2.1549889879035673" />
+      <entry key="S5" value="2.595775256254315" />
+      <entry key="S10" value="2.7843147141082585" />
+      <entry key="S30" value="2.9271157266720302" />
+      <entry key="S60" value="3.155416098567264" />
+      <entry key="M2" value="4.846655227078403" />
+      <entry key="M5" value="10.776162983823157" />
+      <entry key="M10" value="17.04183311120269" />
+      <entry key="M15" value="20.96940882374925" />
+      <entry key="M30" value="29.176933046560332" />
+      <entry key="H1" value="54.29079476006106" />
+      <entry key="H2" value="117.21213878101504" />
+      <entry key="H4" value="199.67509218477088" />
+      <entry key="D1" value="331.4972347090124" />
+      <entry key="W1" value="363.3542719379511" />
     </decayedShown>
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8,
-  "fromUser": false
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8,
+  &quot;fromUser&quot;: false
+}</component>
   <component name="ProjectId" id="3GLuE7bagSiNpHT68dgR9PtLeFC" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -115,13 +120,27 @@
     "codeWithMe.voiceChat.enabledByDefault": "false",
     "git-widget-placeholder": "main",
     "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/Users/ksm/IdeaProjects/Vigilante/app/src/main/kotlin/App.kt"
+    "onboarding.tips.debug.path": "/Users/ksm/IdeaProjects/Vigilante/app/src/main/kotlin/App.kt",
+    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="Vigilante" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="Vigilante" />
+      <option name="filePath" />
+      <method v="2" />
+    </configuration>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -138,7 +157,23 @@
       <option name="presentableId" value="Default" />
       <updated>1783763057195</updated>
       <workItem from="1783763059774" duration="10710000" />
+      <workItem from="1783782283663" duration="394000" />
+      <workItem from="1783782683917" duration="143000" />
+      <workItem from="1783782844026" duration="32000" />
     </task>
+    <task id="LOCAL-00001" summary="feat: added reach check">
+      <option name="closed" value="true" />
+      <created>1783782314875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1783782314875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="feat: added reach check" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: added reach check" />
   </component>
 </project>

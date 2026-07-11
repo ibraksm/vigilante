@@ -5,7 +5,7 @@ import net.minestom.server.entity.Player
 import java.util.UUID
 
 class Vigilante(
-    val bypassedPlayers: Set<UUID>
+    val bypassedPlayers: Set<UUID> = setOf()
 ) {
     fun isBypassed(player: Player): Boolean {
         return bypassedPlayers.contains(player.uuid)
