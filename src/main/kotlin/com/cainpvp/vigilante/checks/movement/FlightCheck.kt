@@ -55,7 +55,6 @@ class FlightCheck(vigilante: Vigilante) : Check(vigilante, "Flight") {
 
                     if (vl > maxVlThreshold) {
                         flag(player.uuid, vl)
-                        event.isCancelled = true
                     }
 
                     player.setTag(VL, vl)
