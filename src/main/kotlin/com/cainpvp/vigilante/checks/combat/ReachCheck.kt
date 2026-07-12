@@ -1,17 +1,18 @@
-package com.cainpvp.vigilante.nodes
+package com.cainpvp.vigilante.checks.combat
 
 import com.cainpvp.vigilante.Vigilante
+import com.cainpvp.vigilante.checks.Check
 import net.minestom.server.collision.BoundingBox
 import net.minestom.server.component.DataComponents
+import net.minestom.server.coordinate.Pos
 import net.minestom.server.entity.Player
 import net.minestom.server.event.EventFilter
 import net.minestom.server.event.EventNode
 import net.minestom.server.event.entity.EntityAttackEvent
 import net.minestom.server.event.trait.InstanceEvent
+import kotlin.math.min
 
-import net.minestom.server.coordinate.Pos
-
-class ReachNode(vigilante: Vigilante) : CheckNode(vigilante) {
+class ReachCheck(vigilante: Vigilante) : Check(vigilante, "Reach") {
     companion object {
         private const val MAX_REACH = 3.0f
     }
@@ -23,7 +24,7 @@ class ReachNode(vigilante: Vigilante) : CheckNode(vigilante) {
             if (event.entity is Player && event.target is Player) {
                 val player = event.entity as Player
 
-                if (!vigilante.isBypassed(player)) {
+                if (vigilante.isConsidered(player)) {
                     val target = event.target as Player
                     var maxReach = MAX_REACH
                     val itemInMainHand = player.itemInMainHand
@@ -33,13 +34,14 @@ class ReachNode(vigilante: Vigilante) : CheckNode(vigilante) {
                     }
 
                     val eyePos = player.position.add(0.0, player.eyeHeight, 0.0)
-
                     val closestPoint = getClosestPointOnHitbox(eyePos, target.position, target.boundingBox)
                     val realDistance = eyePos.distance(closestPoint)
 
                     if (realDistance > maxReach) {
-                        val formattedDistance = String.format("%.3f", realDistance)
-                        player.sendMessage("Flagged for reach | Distance: $formattedDistance | Max: $maxReach")
+                        val overshoot = realDistance - maxReach
+                        val certainty = min((overshoot / 0.5) * 100.0, 100.0).toFloat()
+
+                        flag(player.uuid, certainty)
                     }
                 }
             }

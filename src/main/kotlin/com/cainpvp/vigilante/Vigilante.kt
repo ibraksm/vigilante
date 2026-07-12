@@ -1,15 +1,54 @@
 package com.cainpvp.vigilante
 
+import com.cainpvp.vigilante.events.PlayerFlagEvent
+import com.cainpvp.vigilante.events.PlayerSanctionEvent
+import com.cainpvp.vigilante.player.PlayerProfile
+import org.slf4j.Logger
+import org.slf4j.LoggerFactory
+import net.minestom.server.MinecraftServer
 import net.minestom.server.entity.GameMode
 import net.minestom.server.entity.Player
+import net.minestom.server.event.EventDispatcher
+import net.minestom.server.event.player.AsyncPlayerConfigurationEvent
 import java.util.UUID
+import java.util.concurrent.ConcurrentHashMap
 
 class Vigilante(
-    val bypassedPlayers: Set<UUID> = setOf()
+    private val config: VigilanteConfig
 ) {
-    fun isBypassed(player: Player): Boolean {
-        return bypassedPlayers.contains(player.uuid)
-                || player.gameMode == GameMode.CREATIVE
-                || player.gameMode == GameMode.SPECTATOR
+    companion object {
+        @JvmStatic
+        val LOGGER: Logger = LoggerFactory.getLogger(Vigilante::class.java)
+    }
+    private val playerProfiles = ConcurrentHashMap<UUID, PlayerProfile>()
+
+    init {
+        MinecraftServer.getGlobalEventHandler().addListener(AsyncPlayerConfigurationEvent::class.java) {
+            getPlayerProfile(it.player.uuid)
+        }
+
+        MinecraftServer.getGlobalEventHandler().addListener(PlayerFlagEvent::class.java) { event ->
+            val player = event.player
+            val checkDisplayName = event.checkDisplayName
+            val vl = event.vl
+
+            LOGGER.warn("${player.username} flagged $checkDisplayName, VL: $vl")
+
+            if (vl >= config.banThreshold) {
+                val banEvent = PlayerSanctionEvent(player, SanctionType.BAN)
+                EventDispatcher.call(banEvent)
+            } else if (vl >= config.kickThreshold) {
+                val kickEvent = PlayerSanctionEvent(player, SanctionType.KICK)
+                EventDispatcher.call(kickEvent)
+            }
+        }
+    }
+
+    fun getPlayerProfile(uuid: UUID): PlayerProfile {
+        return playerProfiles.computeIfAbsent(uuid) { PlayerProfile(uuid) }
+    }
+
+    fun isConsidered(player: Player): Boolean {
+        return !config.ignoredPlayers.contains(player.uuid) || !(player.gameMode == GameMode.CREATIVE || player.gameMode == GameMode.SPECTATOR)
     }
 }

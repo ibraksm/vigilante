@@ -4,11 +4,24 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="feat: added reach check">
-      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="update: set emptySet for bypassedPlayers by default in Vigilante.kt">
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/SanctionType.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/VigilanteConfig.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/Check.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/FlightCheck.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/events/PlayerFlagEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/events/PlayerSanctionEvent.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/player/PlayerProfile.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/build.gradle.kts" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/CheckNodeSet.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/CheckSet.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/Vigilante.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/Vigilante.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/core/Controller.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/core/Model.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/core/View.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/nodes/CheckNode.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/nodes/ReachNode.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/combat/ReachCheck.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +29,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
+    <option name="cachedIndexableFilesCount" value="61" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -23,11 +37,30 @@
       <ProjectState />
     </projectState>
   </component>
+  <component name="ExternalProjectsManager">
+    <system id="GRADLE">
+      <state>
+        <projects_view>
+          <tree_state>
+            <expand>
+              <path>
+                <item name="" type="6a2764b6:ExternalProjectsStructure$RootNode" />
+                <item name="Vigilante" type="f1a62948:ProjectNode" />
+              </path>
+            </expand>
+            <select />
+          </tree_state>
+        </projects_view>
+      </state>
+    </system>
+  </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Kotlin Object" />
         <option value="Kotlin Interface" />
+        <option value="Kotlin Enum" />
+        <option value="Kotlin Data Class" />
         <option value="Kotlin Class" />
       </list>
     </option>
@@ -41,61 +74,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.125417000883839" />
-      <entry key="MS500" value="2.0320819198914863" />
-      <entry key="S2" value="2.683843966292069" />
-      <entry key="S5" value="2.865964685865099" />
-      <entry key="S10" value="2.9316456081570936" />
-      <entry key="S30" value="2.9788582999924937" />
-      <entry key="S60" value="3.1483486399192655" />
-      <entry key="M2" value="4.508777995331274" />
-      <entry key="M5" value="9.239603019375485" />
-      <entry key="M10" value="14.29624760402855" />
-      <entry key="M15" value="17.49559491998489" />
-      <entry key="M30" value="23.707559529062163" />
-      <entry key="H1" value="41.21499682014331" />
-      <entry key="H2" value="87.43121943677949" />
-      <entry key="H4" value="150.51670489261667" />
-      <entry key="D1" value="254.12878287530225" />
-      <entry key="W1" value="279.4942778836613" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.000115806190813" />
+      <entry key="S2" value="1.1037368231987479" />
+      <entry key="S5" value="1.4039923837509962" />
+      <entry key="S10" value="1.63560395196301" />
+      <entry key="S30" value="1.8597962998019892" />
+      <entry key="S60" value="1.9280473697815501" />
+      <entry key="M2" value="2.071943578351494" />
+      <entry key="M5" value="4.788787357982865" />
+      <entry key="M10" value="12.495793606775567" />
+      <entry key="M15" value="20.255587129187635" />
+      <entry key="M30" value="39.438704847497256" />
+      <entry key="H1" value="70.7584941586852" />
+      <entry key="H2" value="130.41173491201582" />
+      <entry key="H4" value="232.78425150205203" />
+      <entry key="D1" value="525.7429702299578" />
+      <entry key="W1" value="630.7238620065258" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.136035486797913E-225" />
-      <entry key="S2" value="8.97514677582831E-57" />
-      <entry key="S5" value="5.731880939349692E-23" />
-      <entry key="S10" value="1.0701430145019042E-11" />
-      <entry key="S30" value="3.81490705446543E-4" />
-      <entry key="S60" value="0.03437854130700592" />
-      <entry key="M2" value="0.35593246876219037" />
-      <entry key="M5" value="1.5506370725640526" />
-      <entry key="M10" value="2.7566291752759673" />
-      <entry key="M15" value="3.482964542354076" />
-      <entry key="M30" value="5.476437824865852" />
-      <entry key="H1" value="13.084479618475816" />
-      <entry key="H2" value="29.791295978787808" />
-      <entry key="H4" value="49.16719073902174" />
-      <entry key="D1" value="77.37081388725198" />
-      <entry key="W1" value="83.86036119188817" />
+      <entry key="MS500" value="1.3248945595520158E-171" />
+      <entry key="S2" value="3.706104084242623E-43" />
+      <entry key="S5" value="2.026390359103915E-17" />
+      <entry key="S10" value="7.775280418539202E-9" />
+      <entry key="S30" value="0.004118308779313114" />
+      <entry key="S60" value="0.11141664401405957" />
+      <entry key="M2" value="0.6307053121751712" />
+      <entry key="M5" value="3.1080024532059203" />
+      <entry key="M10" value="8.391811512552062" />
+      <entry key="M15" value="13.922056360530654" />
+      <entry key="M30" value="29.322812842886933" />
+      <entry key="H1" value="54.92220912167962" />
+      <entry key="H2" value="98.30958933903779" />
+      <entry key="H4" value="161.05497476048697" />
+      <entry key="D1" value="302.3897872991881" />
+      <entry key="W1" value="346.6774806307516" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.1461962357337387" />
-      <entry key="MS500" value="1.174187138614939" />
-      <entry key="S2" value="2.1549889879035673" />
-      <entry key="S5" value="2.595775256254315" />
-      <entry key="S10" value="2.7843147141082585" />
-      <entry key="S30" value="2.9271157266720302" />
-      <entry key="S60" value="3.155416098567264" />
-      <entry key="M2" value="4.846655227078403" />
-      <entry key="M5" value="10.776162983823157" />
-      <entry key="M10" value="17.04183311120269" />
-      <entry key="M15" value="20.96940882374925" />
-      <entry key="M30" value="29.176933046560332" />
-      <entry key="H1" value="54.29079476006106" />
-      <entry key="H2" value="117.21213878101504" />
-      <entry key="H4" value="199.67509218477088" />
-      <entry key="D1" value="331.4972347090124" />
-      <entry key="W1" value="363.3542719379511" />
+      <entry key="MS100" value="0.9592641193252643" />
+      <entry key="MS500" value="0.9918317369973148" />
+      <entry key="S2" value="1.1014799356436622" />
+      <entry key="S5" value="1.4028810238100984" />
+      <entry key="S10" value="1.634967911919907" />
+      <entry key="S30" value="1.8635649843320399" />
+      <entry key="S60" value="2.0378012562524095" />
+      <entry key="M2" value="2.697337719519286" />
+      <entry key="M5" value="7.8797798857473165" />
+      <entry key="M10" value="20.860828838529454" />
+      <entry key="M15" value="34.14679360111565" />
+      <entry key="M30" value="68.72858720691315" />
+      <entry key="H1" value="125.64977550029167" />
+      <entry key="H2" value="228.6930613240776" />
+      <entry key="H4" value="393.8154980842639" />
+      <entry key="D1" value="828.1250276166144" />
+      <entry key="W1" value="977.4000643651196" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -109,38 +142,32 @@
     <option name="sortByType" value="true" />
     <option name="sortKey" value="BY_TYPE" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ModuleVcsDetector.initialDetectionPerformed": "true",
-    "RunOnceActivity.MCP Project settings loaded": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
-    "RunOnceActivity.git.unshallow": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "codeWithMe.voiceChat.enabledByDefault": "false",
-    "git-widget-placeholder": "main",
-    "kotlin-language-version-configured": "true",
-    "onboarding.tips.debug.path": "/Users/ksm/IdeaProjects/Vigilante/app/src/main/kotlin/App.kt",
-    "settings.editor.selected.configurable": "reference.settingsdialog.project.gradle"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ModuleVcsDetector.initialDetectionPerformed&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.MCP Project settings loaded&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.git.unshallow&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;codeWithMe.voiceChat.enabledByDefault&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;onboarding.tips.debug.path&quot;: &quot;/Users/ksm/IdeaProjects/Vigilante/app/src/main/kotlin/App.kt&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;reference.settingsdialog.project.gradle&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
-  </component>
-  <component name="RunManager">
-    <configuration default="true" type="JetRunConfigurationType">
-      <module name="Vigilante" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
-      <module name="Vigilante" />
-      <option name="filePath" />
-      <method v="2" />
-    </configuration>
+    <key name="K2MoveDeclarationsDialog.RECENT_PACKAGE_KEY">
+      <recent name="com.cainpvp.vigilante.player" />
+      <recent name="com.cainpvp.vigilante.checks.combat" />
+      <recent name="com.cainpvp.vigilante.checks.movement" />
+      <recent name="com.cainpvp.vigilante.checks" />
+      <recent name="com.cainpvp.vigilante" />
+    </key>
   </component>
   <component name="SharedIndexes">
     <attachedChunks>
@@ -159,7 +186,9 @@
       <workItem from="1783763059774" duration="10710000" />
       <workItem from="1783782283663" duration="394000" />
       <workItem from="1783782683917" duration="143000" />
-      <workItem from="1783782844026" duration="32000" />
+      <workItem from="1783782844026" duration="2695000" />
+      <workItem from="1783790271909" duration="10508000" />
+      <workItem from="1783845509216" duration="10095000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added reach check">
       <option name="closed" value="true" />
@@ -169,11 +198,20 @@
       <option name="project" value="LOCAL" />
       <updated>1783782314875</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update: set emptySet for bypassedPlayers by default in Vigilante.kt">
+      <option name="closed" value="true" />
+      <created>1783782994835</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1783782994835</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: added reach check" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: added reach check" />
+    <MESSAGE value="update: set emptySet for bypassedPlayers by default in Vigilante.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: set emptySet for bypassedPlayers by default in Vigilante.kt" />
   </component>
 </project>
