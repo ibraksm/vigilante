@@ -42,6 +42,10 @@ class Vigilante(
     }
 
     fun isConsidered(player: Player): Boolean {
-        return !config.ignoredPlayers.contains(player.uuid) || !(player.gameMode == GameMode.CREATIVE || player.gameMode == GameMode.SPECTATOR)
+        return if (config.ignoredPlayers.contains(player.uuid)) {
+            false
+        } else {
+            player.gameMode != GameMode.CREATIVE && player.gameMode != GameMode.SPECTATOR
+        }
     }
 }

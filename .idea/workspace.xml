@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="update: removed certainty and replaced with severity" />
+    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="update: removed unnecessary flag log and logger in Vigilante.kt">
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/Vigilante.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/Vigilante.kt" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,61 +58,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="5.88826600246762E-30" />
-      <entry key="MS500" value="1.4334203344280068E-6" />
-      <entry key="S2" value="0.044193413479593456" />
-      <entry key="S5" value="0.48122402757184285" />
-      <entry key="S10" value="1.373254608858174" />
-      <entry key="S30" value="4.410590455605865" />
-      <entry key="S60" value="10.020065546960721" />
-      <entry key="M2" value="19.062801258066074" />
-      <entry key="M5" value="30.193342405165023" />
-      <entry key="M10" value="36.70542653255452" />
-      <entry key="M15" value="42.07258992806104" />
-      <entry key="M30" value="60.28651566884192" />
-      <entry key="H1" value="94.2262977629551" />
-      <entry key="H2" value="149.96917296639975" />
-      <entry key="H4" value="251.6099059686507" />
-      <entry key="D1" value="645.8227129441175" />
-      <entry key="W1" value="820.4843925048717" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000003766" />
+      <entry key="S2" value="1.0008296763960771" />
+      <entry key="S5" value="1.0915213353446267" />
+      <entry key="S10" value="1.6140376365990912" />
+      <entry key="S30" value="4.231862105232057" />
+      <entry key="S60" value="8.028327252255822" />
+      <entry key="M2" value="13.89958549053196" />
+      <entry key="M5" value="27.35037115927616" />
+      <entry key="M10" value="40.88317249872947" />
+      <entry key="M15" value="49.893943933826044" />
+      <entry key="M30" value="72.07124425642829" />
+      <entry key="H1" value="108.51957014781397" />
+      <entry key="H2" value="166.21209273563557" />
+      <entry key="H4" value="269.1119504086651" />
+      <entry key="D1" value="667.0485897341288" />
+      <entry key="W1" value="843.9808560233629" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="1.0" />
-      <entry key="MS500" value="1.0000000000000013" />
-      <entry key="S2" value="1.0001941554735392" />
-      <entry key="S5" value="1.0327557270345162" />
-      <entry key="S10" value="1.1824169499090569" />
-      <entry key="S30" value="1.678495857690161" />
-      <entry key="S60" value="2.088027251447188" />
-      <entry key="M2" value="2.446831278571901" />
-      <entry key="M5" value="2.7520841068872994" />
-      <entry key="M10" value="3.134547005587722" />
-      <entry key="M15" value="4.249361102413424" />
-      <entry key="M30" value="11.545339364603945" />
-      <entry key="H1" value="29.817356333716912" />
-      <entry key="H2" value="64.77590940985158" />
-      <entry key="H4" value="130.31006646839316" />
-      <entry key="D1" value="346.5309319894251" />
-      <entry key="W1" value="431.2668764447395" />
+      <entry key="MS100" value="8.080858242060237E-132" />
+      <entry key="MS500" value="6.0463251410561234E-27" />
+      <entry key="S2" value="2.788514289980145E-7" />
+      <entry key="S5" value="0.0023886476836614476" />
+      <entry key="S10" value="0.049000961080572114" />
+      <entry key="S30" value="0.41593259728833815" />
+      <entry key="S60" value="0.8334187692544895" />
+      <entry key="M2" value="1.3642839918300529" />
+      <entry key="M5" value="2.450471123720299" />
+      <entry key="M10" value="3.5069539920455917" />
+      <entry key="M15" value="4.6924770471601756" />
+      <entry key="M30" value="11.340508752840185" />
+      <entry key="H1" value="28.880059922060845" />
+      <entry key="H2" value="63.52381056602468" />
+      <entry key="H4" value="129.00560269489995" />
+      <entry key="D1" value="347.05300331728444" />
+      <entry key="W1" value="433.00368400045267" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="5.969923230918302E-4" />
-      <entry key="MS500" value="0.22656686345504135" />
-      <entry key="S2" value="0.7338345314648524" />
-      <entry key="S5" value="1.3696478485742918" />
-      <entry key="S10" value="2.4677545840986186" />
-      <entry key="S30" value="6.039130861349117" />
-      <entry key="S60" value="12.071566502061025" />
-      <entry key="M2" value="21.485608804595195" />
-      <entry key="M5" value="32.93368939802292" />
-      <entry key="M10" value="39.832732025440734" />
-      <entry key="M15" value="46.31458184797982" />
-      <entry key="M30" value="71.81841888860812" />
-      <entry key="H1" value="124.02212089582468" />
-      <entry key="H2" value="214.72032817500798" />
-      <entry key="H4" value="381.8960497275113" />
-      <entry key="D1" value="992.3437018155427" />
-      <entry key="W1" value="1251.7495159508526" />
+      <entry key="MS100" value="0.013230395505664488" />
+      <entry key="MS500" value="0.4210314768044414" />
+      <entry key="S2" value="0.8062551353762106" />
+      <entry key="S5" value="1.0040046841186896" />
+      <entry key="S10" value="1.5865754003232642" />
+      <entry key="S30" value="4.569804814215986" />
+      <entry key="S60" value="8.803314246223678" />
+      <entry key="M2" value="15.226144230174729" />
+      <entry key="M5" value="29.78043774854369" />
+      <entry key="M10" value="44.37727669384041" />
+      <entry key="M15" value="54.575469216337964" />
+      <entry key="M30" value="83.3977227727045" />
+      <entry key="H1" value="137.3786385671238" />
+      <entry key="H2" value="229.71160424532255" />
+      <entry key="H4" value="398.0938439854274" />
+      <entry key="D1" value="1014.0916269247796" />
+      <entry key="W1" value="1276.9827787517438" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -171,7 +173,7 @@
       <workItem from="1783782844026" duration="2695000" />
       <workItem from="1783790271909" duration="10508000" />
       <workItem from="1783845509216" duration="19161000" />
-      <workItem from="1784036936500" duration="2193000" />
+      <workItem from="1784036936500" duration="2555000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added reach check">
       <option name="closed" value="true" />
@@ -221,7 +223,15 @@
       <option name="project" value="LOCAL" />
       <updated>1784040602174</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="update: removed unnecessary flag log and logger in Vigilante.kt">
+      <option name="closed" value="true" />
+      <created>1784040939226</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1784040939226</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -231,6 +241,7 @@
     <MESSAGE value="feat: NoFallCheck.kt" />
     <MESSAGE value="update: removed cancel event in FlightCheck.kt" />
     <MESSAGE value="update: removed certainty and replaced with severity" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: removed certainty and replaced with severity" />
+    <MESSAGE value="update: removed unnecessary flag log and logger in Vigilante.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: removed unnecessary flag log and logger in Vigilante.kt" />
   </component>
 </project>
