@@ -1,7 +1,6 @@
 package com.cainpvp.vigilante
 
-import com.cainpvp.vigilante.events.PlayerFlagEvent
-import com.cainpvp.vigilante.events.PlayerSanctionEvent
+import com.cainpvp.vigilante.events.*
 import com.cainpvp.vigilante.player.PlayerProfile
 import com.cainpvp.vigilante.sanction.SanctionType
 import net.minestom.server.MinecraftServer
