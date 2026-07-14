@@ -1,6 +1,6 @@
 package com.cainpvp.vigilante.events
 
-import com.cainpvp.vigilante.SanctionType
+import com.cainpvp.vigilante.sanction.SanctionType
 import net.minestom.server.entity.Player
 import net.minestom.server.event.trait.PlayerEvent
 

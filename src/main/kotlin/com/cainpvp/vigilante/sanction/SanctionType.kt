@@ -1,4 +1,4 @@
-package com.cainpvp.vigilante
+package com.cainpvp.vigilante.sanction
 
 enum class SanctionType {
     KICK, BAN

@@ -3,8 +3,7 @@ package com.cainpvp.vigilante
 import com.cainpvp.vigilante.events.PlayerFlagEvent
 import com.cainpvp.vigilante.events.PlayerSanctionEvent
 import com.cainpvp.vigilante.player.PlayerProfile
-import org.slf4j.Logger
-import org.slf4j.LoggerFactory
+import com.cainpvp.vigilante.sanction.SanctionType
 import net.minestom.server.MinecraftServer
 import net.minestom.server.entity.GameMode
 import net.minestom.server.entity.Player
