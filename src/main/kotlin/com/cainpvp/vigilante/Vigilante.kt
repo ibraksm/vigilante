@@ -16,10 +16,6 @@ import java.util.concurrent.ConcurrentHashMap
 class Vigilante(
     private val config: VigilanteConfig
 ) {
-    companion object {
-        @JvmStatic
-        val LOGGER: Logger = LoggerFactory.getLogger(Vigilante::class.java)
-    }
     private val playerProfiles = ConcurrentHashMap<UUID, PlayerProfile>()
 
     init {
@@ -29,10 +25,7 @@ class Vigilante(
 
         MinecraftServer.getGlobalEventHandler().addListener(PlayerFlagEvent::class.java) { event ->
             val player = event.player
-            val checkDisplayName = event.checkDisplayName
             val vl = event.vl
-
-            LOGGER.warn("${player.username} flagged $checkDisplayName, VL: $vl")
 
             if (vl >= config.banThreshold) {
                 val banEvent = PlayerSanctionEvent(player, SanctionType.BAN)

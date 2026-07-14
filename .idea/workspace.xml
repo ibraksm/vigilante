@@ -4,13 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="update: removed cancel event in FlightCheck.kt">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/Check.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/Check.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/NoFallCheck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/NoFallCheck.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/events/PlayerFlagEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/events/PlayerFlagEvent.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/player/PlayerProfile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/player/PlayerProfile.kt" afterDir="false" />
-    </list>
+    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="update: removed certainty and replaced with severity" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -62,61 +56,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="2.316903104958544" />
-      <entry key="MS500" value="3.93599512651803" />
-      <entry key="S2" value="4.798692983976315" />
-      <entry key="S5" value="7.171062172042246" />
-      <entry key="S10" value="11.324154209636154" />
-      <entry key="S30" value="17.70118510839597" />
-      <entry key="S60" value="20.11893482491709" />
-      <entry key="M2" value="21.496275427524324" />
-      <entry key="M5" value="22.432650756575445" />
-      <entry key="M10" value="24.15093169238502" />
-      <entry key="M15" value="27.980956022241422" />
-      <entry key="M30" value="44.915328806259474" />
-      <entry key="H1" value="78.16608195046746" />
-      <entry key="H2" value="133.3688425568223" />
-      <entry key="H4" value="234.6602807163539" />
-      <entry key="D1" value="627.7144230843521" />
-      <entry key="W1" value="801.6465695375392" />
+      <entry key="MS100" value="5.88826600246762E-30" />
+      <entry key="MS500" value="1.4334203344280068E-6" />
+      <entry key="S2" value="0.044193413479593456" />
+      <entry key="S5" value="0.48122402757184285" />
+      <entry key="S10" value="1.373254608858174" />
+      <entry key="S30" value="4.410590455605865" />
+      <entry key="S60" value="10.020065546960721" />
+      <entry key="M2" value="19.062801258066074" />
+      <entry key="M5" value="30.193342405165023" />
+      <entry key="M10" value="36.70542653255452" />
+      <entry key="M15" value="42.07258992806104" />
+      <entry key="M30" value="60.28651566884192" />
+      <entry key="H1" value="94.2262977629551" />
+      <entry key="H2" value="149.96917296639975" />
+      <entry key="H4" value="251.6099059686507" />
+      <entry key="D1" value="645.8227129441175" />
+      <entry key="W1" value="820.4843925048717" />
     </decayedCancelled>
     <decayedSelected>
-      <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="0.0" />
-      <entry key="S2" value="0.0" />
-      <entry key="S5" value="2.7428145485233933E-180" />
-      <entry key="S10" value="1.6561444948930205E-90" />
-      <entry key="S30" value="1.187632246267409E-30" />
-      <entry key="S60" value="1.2174897293955504E-15" />
-      <entry key="M2" value="6.163233722141923E-8" />
-      <entry key="M5" value="0.005203887565818714" />
-      <entry key="M10" value="0.32525805366426286" />
-      <entry key="M15" value="1.5304250315134067" />
-      <entry key="M30" value="9.18639376564629" />
-      <entry key="H1" value="27.75540804689427" />
-      <entry key="H2" value="62.83203015267851" />
-      <entry key="H4" value="128.3876038926946" />
-      <entry key="D1" value="344.0122125231981" />
-      <entry key="W1" value="428.3525048361328" />
+      <entry key="MS100" value="1.0" />
+      <entry key="MS500" value="1.0000000000000013" />
+      <entry key="S2" value="1.0001941554735392" />
+      <entry key="S5" value="1.0327557270345162" />
+      <entry key="S10" value="1.1824169499090569" />
+      <entry key="S30" value="1.678495857690161" />
+      <entry key="S60" value="2.088027251447188" />
+      <entry key="M2" value="2.446831278571901" />
+      <entry key="M5" value="2.7520841068872994" />
+      <entry key="M10" value="3.134547005587722" />
+      <entry key="M15" value="4.249361102413424" />
+      <entry key="M30" value="11.545339364603945" />
+      <entry key="H1" value="29.817356333716912" />
+      <entry key="H2" value="64.77590940985158" />
+      <entry key="H4" value="130.31006646839316" />
+      <entry key="D1" value="346.5309319894251" />
+      <entry key="W1" value="431.2668764447395" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="2.250161328914601" />
-      <entry key="MS500" value="3.909256477058219" />
-      <entry key="S2" value="4.790135628230783" />
-      <entry key="S5" value="7.1652414269607165" />
-      <entry key="S10" value="11.318921575143266" />
-      <entry key="S30" value="17.698180843583994" />
-      <entry key="S60" value="20.11718682295423" />
-      <entry key="M2" value="21.49533075313862" />
-      <entry key="M5" value="22.437397683740386" />
-      <entry key="M10" value="24.474811933542167" />
-      <entry key="M15" value="29.507724328676" />
-      <entry key="M30" value="54.08963736192941" />
-      <entry key="H1" value="105.90033934307858" />
-      <entry key="H2" value="196.1762523599313" />
-      <entry key="H4" value="363.02403520672704" />
-      <entry key="D1" value="971.7167241642132" />
-      <entry key="W1" value="1229.9973275309455" />
+      <entry key="MS100" value="5.969923230918302E-4" />
+      <entry key="MS500" value="0.22656686345504135" />
+      <entry key="S2" value="0.7338345314648524" />
+      <entry key="S5" value="1.3696478485742918" />
+      <entry key="S10" value="2.4677545840986186" />
+      <entry key="S30" value="6.039130861349117" />
+      <entry key="S60" value="12.071566502061025" />
+      <entry key="M2" value="21.485608804595195" />
+      <entry key="M5" value="32.93368939802292" />
+      <entry key="M10" value="39.832732025440734" />
+      <entry key="M15" value="46.31458184797982" />
+      <entry key="M30" value="71.81841888860812" />
+      <entry key="H1" value="124.02212089582468" />
+      <entry key="H2" value="214.72032817500798" />
+      <entry key="H4" value="381.8960497275113" />
+      <entry key="D1" value="992.3437018155427" />
+      <entry key="W1" value="1251.7495159508526" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -177,7 +171,7 @@
       <workItem from="1783782844026" duration="2695000" />
       <workItem from="1783790271909" duration="10508000" />
       <workItem from="1783845509216" duration="19161000" />
-      <workItem from="1784036936500" duration="1830000" />
+      <workItem from="1784036936500" duration="2193000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added reach check">
       <option name="closed" value="true" />
@@ -219,7 +213,15 @@
       <option name="project" value="LOCAL" />
       <updated>1783874855003</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update: removed certainty and replaced with severity">
+      <option name="closed" value="true" />
+      <created>1784040602174</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1784040602174</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
@@ -228,6 +230,7 @@
     <MESSAGE value="feat: FlightCheck.kt" />
     <MESSAGE value="feat: NoFallCheck.kt" />
     <MESSAGE value="update: removed cancel event in FlightCheck.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="update: removed cancel event in FlightCheck.kt" />
+    <MESSAGE value="update: removed certainty and replaced with severity" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: removed certainty and replaced with severity" />
   </component>
 </project>
