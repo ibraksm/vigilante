@@ -14,11 +14,11 @@ abstract class Check(
 ) {
     abstract fun createNode(): EventNode<InstanceEvent>
 
-    fun flag(uuid: UUID, certainty: Float) {
+    fun flag(uuid: UUID, severity: Float = 1f) {
         val player = MinecraftServer.getConnectionManager().getOnlinePlayerByUuid(uuid) ?: return
 
         val profile = vigilante.getPlayerProfile(uuid)
-        val vl = profile.addViolation(this::class, certainty)
+        val vl = profile.addViolation(this::class, severity)
         val playerFlagEvent = PlayerFlagEvent(player, displayName, vl)
 
         EventDispatcher.call(playerFlagEvent)

@@ -2,15 +2,12 @@ package com.cainpvp.vigilante.checks.movement
 
 import com.cainpvp.vigilante.Vigilante
 import com.cainpvp.vigilante.checks.Check
-import net.minestom.server.collision.BoundingBox
 import net.minestom.server.coordinate.Point
-import net.minestom.server.coordinate.Vec
 import net.minestom.server.entity.Player
 import net.minestom.server.event.EventFilter
 import net.minestom.server.event.EventNode
 import net.minestom.server.event.player.PlayerMoveEvent
 import net.minestom.server.event.trait.InstanceEvent
-import net.minestom.server.instance.Instance
 import net.minestom.server.instance.block.Block
 import kotlin.math.floor
 
@@ -32,7 +29,7 @@ class NoFallCheck(vigilante: Vigilante): Check(vigilante, "No Fall") {
                 val hasGround = blocksUnderFeet.any { it.isSolid }
 
                 if (event.isOnGround && !hasGround && deltaY <= minimumDeltaY) {
-                    flag(player.uuid, 95f)
+                    flag(player.uuid)
                 }
             }
         }

@@ -9,9 +9,9 @@ import kotlin.reflect.KClass
 data class PlayerProfile(val uuid: UUID) {
     val violations = ConcurrentHashMap<KClass<out Check>, Float>()
 
-    fun addViolation(checkClass: KClass<out Check>, certainty: Float): Float {
+    fun addViolation(checkClass: KClass<out Check>, amount: Float): Float {
         val currentVl = violations.getOrDefault(checkClass, 0f)
-        val newVl = currentVl + (certainty / 100f)
+        val newVl = currentVl + amount
 
         violations[checkClass] = newVl
 

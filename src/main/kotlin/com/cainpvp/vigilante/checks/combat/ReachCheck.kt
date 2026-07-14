@@ -38,10 +38,10 @@ class ReachCheck(vigilante: Vigilante) : Check(vigilante, "Reach") {
                     val realDistance = eyePos.distance(closestPoint)
 
                     if (realDistance > maxReach) {
-                        val overshoot = realDistance - maxReach
-                        val certainty = min((overshoot / 0.5) * 100.0, 100.0).toFloat()
+                        val overshoot = (realDistance - maxReach).toFloat()
+                        val severity = 1f + overshoot * 3
 
-                        flag(player.uuid, certainty)
+                        flag(player.uuid, severity)
                     }
                 }
             }

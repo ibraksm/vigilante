@@ -4,10 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="feat: FlightCheck.kt">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/NoFallCheck.kt" afterDir="false" />
+    <list default="true" id="df0febaa-20d6-4765-98f8-8a05c4b63249" name="Changes" comment="update: removed cancel event in FlightCheck.kt">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/FlightCheck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/FlightCheck.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/Check.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/Check.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/NoFallCheck.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/checks/movement/NoFallCheck.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/events/PlayerFlagEvent.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/events/PlayerFlagEvent.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/player/PlayerProfile.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/cainpvp/vigilante/player/PlayerProfile.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,7 +17,7 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="EmbeddingIndexingInfo">
-    <option name="cachedIndexableFilesCount" value="61" />
+    <option name="cachedIndexableFilesCount" value="59" />
     <option name="fileBasedEmbeddingIndicesEnabled" value="true" />
   </component>
   <component name="ExternalProjectsData">
@@ -60,61 +62,61 @@
   </component>
   <component name="NextEditCompletionFeaturesState">
     <decayedCancelled>
-      <entry key="MS100" value="1.0000001936560623" />
-      <entry key="MS500" value="1.0454366411798184" />
-      <entry key="S2" value="1.4636100616918963" />
-      <entry key="S5" value="1.8160224688664601" />
-      <entry key="S10" value="2.159638223634305" />
-      <entry key="S30" value="3.462406724125413" />
-      <entry key="S60" value="5.743320368549194" />
-      <entry key="M2" value="9.666481897281646" />
-      <entry key="M5" value="16.76232124809914" />
-      <entry key="M10" value="23.764176036428868" />
-      <entry key="M15" value="29.758966986006534" />
-      <entry key="M30" value="46.67453581002362" />
-      <entry key="H1" value="74.08164847294951" />
-      <entry key="H2" value="122.22681454297431" />
-      <entry key="H4" value="218.99513411816093" />
-      <entry key="D1" value="591.9845863949304" />
-      <entry key="W1" value="752.6076640667404" />
+      <entry key="MS100" value="2.316903104958544" />
+      <entry key="MS500" value="3.93599512651803" />
+      <entry key="S2" value="4.798692983976315" />
+      <entry key="S5" value="7.171062172042246" />
+      <entry key="S10" value="11.324154209636154" />
+      <entry key="S30" value="17.70118510839597" />
+      <entry key="S60" value="20.11893482491709" />
+      <entry key="M2" value="21.496275427524324" />
+      <entry key="M5" value="22.432650756575445" />
+      <entry key="M10" value="24.15093169238502" />
+      <entry key="M15" value="27.980956022241422" />
+      <entry key="M30" value="44.915328806259474" />
+      <entry key="H1" value="78.16608195046746" />
+      <entry key="H2" value="133.3688425568223" />
+      <entry key="H4" value="234.6602807163539" />
+      <entry key="D1" value="627.7144230843521" />
+      <entry key="W1" value="801.6465695375392" />
     </decayedCancelled>
     <decayedSelected>
       <entry key="MS100" value="0.0" />
-      <entry key="MS500" value="1.3810120188840496E-95" />
-      <entry key="S2" value="3.3938656284733936E-24" />
-      <entry key="S5" value="7.575799918254906E-10" />
-      <entry key="S10" value="5.07670242642374E-5" />
-      <entry key="S30" value="0.09892599950596662" />
-      <entry key="S60" value="0.7078317706668024" />
-      <entry key="M2" value="2.184292061030456" />
-      <entry key="M5" value="5.654992964654766" />
-      <entry key="M10" value="10.435976331097987" />
-      <entry key="M15" value="15.345427003534601" />
-      <entry key="M30" value="28.81072913906744" />
-      <entry key="H1" value="48.51512511230773" />
-      <entry key="H2" value="82.45828159673955" />
-      <entry key="H4" value="146.62134230987255" />
-      <entry key="D1" value="349.297766499095" />
-      <entry key="W1" value="425.9855545950842" />
+      <entry key="MS500" value="0.0" />
+      <entry key="S2" value="0.0" />
+      <entry key="S5" value="2.7428145485233933E-180" />
+      <entry key="S10" value="1.6561444948930205E-90" />
+      <entry key="S30" value="1.187632246267409E-30" />
+      <entry key="S60" value="1.2174897293955504E-15" />
+      <entry key="M2" value="6.163233722141923E-8" />
+      <entry key="M5" value="0.005203887565818714" />
+      <entry key="M10" value="0.32525805366426286" />
+      <entry key="M15" value="1.5304250315134067" />
+      <entry key="M30" value="9.18639376564629" />
+      <entry key="H1" value="27.75540804689427" />
+      <entry key="H2" value="62.83203015267851" />
+      <entry key="H4" value="128.3876038926946" />
+      <entry key="D1" value="344.0122125231981" />
+      <entry key="W1" value="428.3525048361328" />
     </decayedSelected>
     <decayedShown>
-      <entry key="MS100" value="0.6877710333414745" />
-      <entry key="MS500" value="0.9694525090183521" />
-      <entry key="S2" value="1.4349319372161655" />
-      <entry key="S5" value="1.8019214276299171" />
-      <entry key="S10" value="2.151861358016954" />
-      <entry key="S30" value="3.5539156503159393" />
-      <entry key="S60" value="6.432953658510373" />
-      <entry key="M2" value="11.824319657586212" />
-      <entry key="M5" value="22.39026635685639" />
-      <entry key="M10" value="34.17292150749161" />
-      <entry key="M15" value="45.07455915680402" />
-      <entry key="M30" value="75.44894573003162" />
-      <entry key="H1" value="122.5599831349987" />
-      <entry key="H2" value="204.6527973841937" />
-      <entry key="H4" value="365.5892793019546" />
-      <entry key="D1" value="941.2723033278327" />
-      <entry key="W1" value="1178.5914836211548" />
+      <entry key="MS100" value="2.250161328914601" />
+      <entry key="MS500" value="3.909256477058219" />
+      <entry key="S2" value="4.790135628230783" />
+      <entry key="S5" value="7.1652414269607165" />
+      <entry key="S10" value="11.318921575143266" />
+      <entry key="S30" value="17.698180843583994" />
+      <entry key="S60" value="20.11718682295423" />
+      <entry key="M2" value="21.49533075313862" />
+      <entry key="M5" value="22.437397683740386" />
+      <entry key="M10" value="24.474811933542167" />
+      <entry key="M15" value="29.507724328676" />
+      <entry key="M30" value="54.08963736192941" />
+      <entry key="H1" value="105.90033934307858" />
+      <entry key="H2" value="196.1762523599313" />
+      <entry key="H4" value="363.02403520672704" />
+      <entry key="D1" value="971.7167241642132" />
+      <entry key="W1" value="1229.9973275309455" />
     </decayedShown>
   </component>
   <component name="ProjectColorInfo">{
@@ -174,7 +176,8 @@
       <workItem from="1783782683917" duration="143000" />
       <workItem from="1783782844026" duration="2695000" />
       <workItem from="1783790271909" duration="10508000" />
-      <workItem from="1783845509216" duration="18626000" />
+      <workItem from="1783845509216" duration="19161000" />
+      <workItem from="1784036936500" duration="1830000" />
     </task>
     <task id="LOCAL-00001" summary="feat: added reach check">
       <option name="closed" value="true" />
@@ -200,13 +203,31 @@
       <option name="project" value="LOCAL" />
       <updated>1783858990368</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="feat: NoFallCheck.kt">
+      <option name="closed" value="true" />
+      <created>1783874829563</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1783874829563</updated>
+    </task>
+    <task id="LOCAL-00005" summary="update: removed cancel event in FlightCheck.kt">
+      <option name="closed" value="true" />
+      <created>1783874855003</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1783874855003</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="feat: added reach check" />
     <MESSAGE value="update: set emptySet for bypassedPlayers by default in Vigilante.kt" />
     <MESSAGE value="feat: FlightCheck.kt" />
-    <option name="LAST_COMMIT_MESSAGE" value="feat: FlightCheck.kt" />
+    <MESSAGE value="feat: NoFallCheck.kt" />
+    <MESSAGE value="update: removed cancel event in FlightCheck.kt" />
+    <option name="LAST_COMMIT_MESSAGE" value="update: removed cancel event in FlightCheck.kt" />
   </component>
 </project>
