@@ -17,7 +17,7 @@ class FlightCheck(vigilante: Vigilante) : Check(vigilante, "Flight") {
         private val VL = Tag.Float("vigilante_flight_vl").defaultValue(0f)
     }
 
-    private val baseTolerance = 0.05
+    private val baseTolerance = 0.2
     private val maxVlThreshold = 1.5
 
     override fun createNode(): EventNode<InstanceEvent> {
